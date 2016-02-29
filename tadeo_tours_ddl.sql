@@ -2,6 +2,11 @@
 --   en:        2016-02-28 13:50:36 COT
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
+REM   Script:   tadeo_tours.SQL
+REM   Purpose:  Install Tadeo Tours System 
+REM   Created:  By Felix Orduz <felix.orduz@gmail.com>, on 28-FEB-2016 
+REM   for the course Programacion de base datos
+
 SET FEEDBACK 1
 SET NUMWIDTH 10
 SET LINESIZE 80

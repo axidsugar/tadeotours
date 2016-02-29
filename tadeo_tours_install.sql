@@ -1,6 +1,6 @@
-REM   Script:   tadeo_torus.SQL
+REM   Script:   tadeo_tours.SQL
 REM   Purpose:  Install Tadeo Tours System 
-REM   Created:  By Felix Orduz, on 28-FEB-2016 
+REM   Created:  By Felix Orduz <felix.orduz@gmail.com>, on 28-FEB-2016 
 REM		for the course Programacion de base datos
 
 REM   This script accepts 4 parameter - password for the accounts,
