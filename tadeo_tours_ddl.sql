@@ -15,34 +15,31 @@ SET TAB OFF
 SET PAGESIZE 100
 SET ECHO OFF 
 
-Prompt ******  Creating aerolinea table ....
+Prompt ******  Creating tables ....
 
 
 CREATE TABLE aerolinea
   (
-    aerolinea_ID NUMBER NOT NULL ,
-    nombre       VARCHAR2(50) NOT NULL
+    aerolinea_id NUMBER NOT NULL ,
+    nombre       VARCHAR2 (50) NOT NULL
   ) ;
 COMMENT ON TABLE aerolinea
 IS
   'Tabla que almancena las aerolineas' ;
-ALTER TABLE aerolinea ADD CONSTRAINT aerolinea_PK PRIMARY KEY ( aerolinea_ID ) ;
+ALTER TABLE aerolinea ADD CONSTRAINT aerolinea_PK PRIMARY KEY ( aerolinea_id ) ;
 
-
-Prompt ******  Creating ciudad table ....
 
 CREATE TABLE ciudad
   (
-    ciudad_ID NUMBER (5) NOT NULL ,
+    ciudad_id NUMBER (5) NOT NULL ,
     nombre    VARCHAR2 (30) ,
     pais_ID   NUMBER NOT NULL
   ) ;
 COMMENT ON TABLE ciudad
 IS
   'manejo de ciudades' ;
-ALTER TABLE ciudad ADD CONSTRAINT ciudad_PK PRIMARY KEY ( ciudad_ID ) ;
+ALTER TABLE ciudad ADD CONSTRAINT ciudad_PK PRIMARY KEY ( ciudad_id ) ;
 
-Prompt ******  Creating cliente table ....
 
 CREATE TABLE cliente
   (
@@ -63,8 +60,8 @@ COMMENT ON TABLE cliente
 IS
   'Tabla para almacenar los clientes' ;
 ALTER TABLE cliente ADD CONSTRAINT cliente_PK PRIMARY KEY ( cliente_id ) ;
+ALTER TABLE cliente ADD CONSTRAINT cliente_tipodoc_doc_UN UNIQUE ( tipo_documento , numero_documento ) ;
 
-Prompt ******  Creating cliente_reserva table ....
 
 CREATE TABLE cliente_reserva
   (
@@ -77,7 +74,6 @@ IS
   'Tabla que almacena la informacion de cada cliente que participa en una reserva' ;
 ALTER TABLE cliente_reserva ADD CONSTRAINT cliente_reserva_PK PRIMARY KEY ( cliente_id, reserva_id ) ;
 
-Prompt ******  Creating hotel table ....
 
 CREATE TABLE hotel
   (
@@ -103,7 +99,6 @@ IS
 ALTER TABLE hotel ADD CONSTRAINT hotel_categoria_CK CHECK (categoria >= 0 AND categoria<=7) ;
 ALTER TABLE hotel ADD CONSTRAINT hotel_PK PRIMARY KEY ( hotel_id ) ;
 
-Prompt ******  Creating pago table ....
 
 CREATE TABLE pago
   (
@@ -116,17 +111,15 @@ IS
   'Tabla para almacenar los pagos de una reserva' ;
 ALTER TABLE pago ADD CONSTRAINT pago_PK PRIMARY KEY ( pago_id ) ;
 
-Prompt ******  Creating pais table ....
 
 CREATE TABLE pais
-  ( pais_ID NUMBER NOT NULL , nombre VARCHAR2 (30)
+  ( pais_id NUMBER NOT NULL , nombre VARCHAR2 (30)
   ) ;
 COMMENT ON TABLE pais
 IS
   'tabla para manejar los paises ' ;
-ALTER TABLE pais ADD CONSTRAINT pais_PK PRIMARY KEY ( pais_ID ) ;
+ALTER TABLE pais ADD CONSTRAINT pais_PK PRIMARY KEY ( pais_id ) ;
 
-Prompt ******  Creating reserva table ....
 
 CREATE TABLE reserva
   (
@@ -145,13 +138,12 @@ CREATE TABLE reserva
   ) ;
 COMMENT ON TABLE reserva
 IS
-  'TaTabla para manejar las reservas del sistema' ;
+  'Tabla para manejar las reservas del sistema' ;
   COMMENT ON COLUMN reserva.usuario_id
 IS
   'usuario que crea la reserva' ;
 ALTER TABLE reserva ADD CONSTRAINT reserva_PK PRIMARY KEY ( reserva_id ) ;
 
-Prompt ******  Creating reserva_hotel table ....
 
 CREATE TABLE reserva_hotel
   (
@@ -160,8 +152,8 @@ CREATE TABLE reserva_hotel
     hotel_id             NUMBER (5) NOT NULL ,
     checkin              DATE NOT NULL ,
     checkout             DATE NOT NULL ,
-    estado               VARCHAR2 (2) NOT NULL ,
-    valor                NUMBER (8,2) NOT NULL ,
+    estado               VARCHAR2 (3) NOT NULL ,
+    valor                NUMBER (10,2) NOT NULL ,
     acomodacion          NUMBER (1) NOT NULL ,
     limite_pago          DATE ,
     realizado            DATE NOT NULL ,
@@ -179,10 +171,9 @@ IS
   COMMENT ON COLUMN reserva_hotel.confirmacion_reserva
 IS
   'Numero de confirmacion de reserva del hotel ' ;
-ALTER TABLE reserva_hotel ADD CONSTRAINT reserva_hotel_CK_1 CHECK (estado IN ('RES','CON','CAN')) ;
+ALTER TABLE reserva_hotel ADD CONSTRAINT reserva_hotel_estado_CK CHECK (estado IN ('RES','CON','CAN')) ;
 ALTER TABLE reserva_hotel ADD CONSTRAINT reserva_hotel_PK PRIMARY KEY ( reserva_hotel_id ) ;
 
-Prompt ******  Creating reserva_vuelo table ....
 
 CREATE TABLE reserva_vuelo
   (
@@ -192,13 +183,13 @@ CREATE TABLE reserva_vuelo
     clase                VARCHAR2 (3) NOT NULL ,
     estado               VARCHAR2 (3) NOT NULL ,
     limite_pago          DATE NOT NULL ,
-    valor                NUMBER (8,2) NOT NULL ,
+    valor                NUMBER (10,2) NOT NULL ,
     realizado            DATE NOT NULL ,
     confirmacion_reserva VARCHAR2 (50)
   ) ;
 COMMENT ON TABLE reserva_vuelo
 IS
-  'Tabla que almancena los vuelos de una reserva' ;
+  'Tabla que almacena los vuelos de una reserva' ;
   COMMENT ON COLUMN reserva_vuelo.valor
 IS
   'Valor a pagar ' ;
@@ -212,7 +203,6 @@ ALTER TABLE reserva_vuelo ADD CONSTRAINT reserva_vuelo_clase_CK CHECK (clase   I
 ALTER TABLE reserva_vuelo ADD CONSTRAINT reserva_vuelo_estado_CK CHECK (estado IN ('RES','CON','CAN')) ;
 ALTER TABLE reserva_vuelo ADD CONSTRAINT reserva_vuelo_PK PRIMARY KEY ( reserva_vuelo_id ) ;
 
-Prompt ******  Creating usuario table ....
 
 CREATE TABLE usuario
   (
@@ -228,7 +218,6 @@ ALTER TABLE usuario ADD CONSTRAINT usuario_rol_CK CHECK (rol IN ('ADM','USR')) ;
 ALTER TABLE usuario ADD CONSTRAINT usuario_PK PRIMARY KEY ( usuario_id ) ;
 ALTER TABLE usuario ADD CONSTRAINT usuario_login_UN UNIQUE ( login ) ;
 
-Prompt ******  Creating vuelo table ....
 
 CREATE TABLE vuelo
   (
@@ -252,24 +241,22 @@ IS
   COMMENT ON COLUMN vuelo.ciudad_destino
 IS
   'ciudad destino del vuelo' ;
-
-Prompt ******  Creating Constraint 
-
 ALTER TABLE vuelo ADD CONSTRAINT vuelo_PK PRIMARY KEY ( vuelo_id ) ;
 
-ALTER TABLE ciudad ADD CONSTRAINT ciudad_pais_FK FOREIGN KEY ( pais_ID ) REFERENCES pais ( pais_ID ) ;
+
+ALTER TABLE ciudad ADD CONSTRAINT ciudad_pais_FK FOREIGN KEY ( pais_ID ) REFERENCES pais ( pais_id ) ;
 
 ALTER TABLE cliente_reserva ADD CONSTRAINT cliente_reserva_cliente_FK FOREIGN KEY ( cliente_id ) REFERENCES cliente ( cliente_id ) ;
 
 ALTER TABLE cliente_reserva ADD CONSTRAINT cliente_reserva_reserva_FK FOREIGN KEY ( reserva_id ) REFERENCES reserva ( reserva_id ) ;
 
-ALTER TABLE hotel ADD CONSTRAINT hotel_ciudad_FK FOREIGN KEY ( ciudad_id ) REFERENCES ciudad ( ciudad_ID ) ;
+ALTER TABLE hotel ADD CONSTRAINT hotel_ciudad_FK FOREIGN KEY ( ciudad_id ) REFERENCES ciudad ( ciudad_id ) ;
 
 ALTER TABLE pago ADD CONSTRAINT pago_reserva_FK FOREIGN KEY ( reserva_id ) REFERENCES reserva ( reserva_id ) ;
 
-ALTER TABLE reserva ADD CONSTRAINT reserva_ciudaddestino_FK FOREIGN KEY ( ciudad_destino ) REFERENCES ciudad ( ciudad_ID ) ;
+ALTER TABLE reserva ADD CONSTRAINT reserva_ciudaddestino_FK FOREIGN KEY ( ciudad_destino ) REFERENCES ciudad ( ciudad_id ) ;
 
-ALTER TABLE reserva ADD CONSTRAINT reserva_ciudadorigen_FK FOREIGN KEY ( ciudad_origen ) REFERENCES ciudad ( ciudad_ID ) ;
+ALTER TABLE reserva ADD CONSTRAINT reserva_ciudadorigen_FK FOREIGN KEY ( ciudad_origen ) REFERENCES ciudad ( ciudad_id ) ;
 
 ALTER TABLE reserva_hotel ADD CONSTRAINT reserva_hotel_hotel_FK FOREIGN KEY ( hotel_id ) REFERENCES hotel ( hotel_id ) ;
 
@@ -281,11 +268,11 @@ ALTER TABLE reserva_vuelo ADD CONSTRAINT reserva_vuelo_reserva_FK FOREIGN KEY ( 
 
 ALTER TABLE reserva_vuelo ADD CONSTRAINT reserva_vuelo_vuelo_FK FOREIGN KEY ( vuelo_id ) REFERENCES vuelo ( vuelo_id ) ;
 
-ALTER TABLE vuelo ADD CONSTRAINT vuelo_aerolinea_FK FOREIGN KEY ( aerolinea_id ) REFERENCES aerolinea ( aerolinea_ID ) ;
+ALTER TABLE vuelo ADD CONSTRAINT vuelo_aerolinea_FK FOREIGN KEY ( aerolinea_id ) REFERENCES aerolinea ( aerolinea_id ) ;
 
-ALTER TABLE vuelo ADD CONSTRAINT vuelo_ciudaddestino_FK FOREIGN KEY ( ciudad_destino ) REFERENCES ciudad ( ciudad_ID ) ;
+ALTER TABLE vuelo ADD CONSTRAINT vuelo_ciudaddestino_FK FOREIGN KEY ( ciudad_destino ) REFERENCES ciudad ( ciudad_id ) ;
 
-ALTER TABLE vuelo ADD CONSTRAINT vuelo_ciudadorigen_FK FOREIGN KEY ( ciudad_origen ) REFERENCES ciudad ( ciudad_ID ) ;
+ALTER TABLE vuelo ADD CONSTRAINT vuelo_ciudadorigen_FK FOREIGN KEY ( ciudad_origen ) REFERENCES ciudad ( ciudad_id ) ;
 
 CREATE OR REPLACE TRIGGER FKNTM_hotel BEFORE
   UPDATE OF ciudad_id ON hotel BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table hotel is violated');
@@ -298,15 +285,15 @@ END;
 /
 
 CREATE OR REPLACE TRIGGER FKNTM_reserva BEFORE
-  UPDATE OF ciudad_origen,
-    ciudad_destino,
+  UPDATE OF ciudad_destino,
+    ciudad_origen,
     usuario_id ON reserva BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table reserva is violated');
 END;
 /
 
 CREATE OR REPLACE TRIGGER FKNTM_reserva_hotel BEFORE
-  UPDATE OF reserva_id,
-    hotel_id ON reserva_hotel BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table reserva_hotel is violated');
+  UPDATE OF hotel_id,
+    reserva_id ON reserva_hotel BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table reserva_hotel is violated');
 END;
 /
 
@@ -316,8 +303,8 @@ END;
 /
 
 CREATE OR REPLACE TRIGGER FKNTM_vuelo BEFORE
-  UPDATE OF aerolinea_id,
-    ciudad_origen,
-    ciudad_destino ON vuelo BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table vuelo is violated');
+  UPDATE OF ciudad_origen,
+    ciudad_destino,
+    aerolinea_id ON vuelo BEGIN raise_application_error(-20225,'Non Transferable FK constraint  on table vuelo is violated');
 END;
 /

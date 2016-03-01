@@ -43,5 +43,6 @@ REM  connect to user account and invoke the scripts that create schema objects.
 
 CONNECT &&username/&&password@&&database
 @tadeo_tours_ddl
+@tadeo_tours_sample_data
 
 SPOOL OFF
