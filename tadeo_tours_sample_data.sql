@@ -44,16 +44,27 @@ INSERT INTO ciudad ( ciudad_id, nombre, pais_id)
 
 Prompt ******  Insert table cliente ....
 
-INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia,    telefono_fijo, telefono_celular, fax, email)
- 	VALUES (1,'Hugo','McDuc','CC','1234',TO_DATE('1-01-1970','DD-MM-YYYY'),null,null,null,null,null,null);
-INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia,    telefono_fijo, telefono_celular, fax, email)
- 	VALUES (2,'Paco','McDuc','CC','1235',TO_DATE('1-01-1970','DD-MM-YYYY'),null,null,null,null,null,null);
-INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia,    telefono_fijo, telefono_celular, fax, email)
- 	VALUES (3,'Luis','McDuc','CC','1245',TO_DATE('1-01-1970','DD-MM-YYYY'),null,null,null,null,null,null);
-INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia,    telefono_fijo, telefono_celular, fax, email)
- 	VALUES (4,'Donald','McDuc','CC','1356',TO_DATE('1-01-1940','DD-MM-YYYY'),null,null,null,null,null,null);
-INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia,    telefono_fijo, telefono_celular, fax, email)
- 	VALUES (5,'Rich','McDuc','CC','2367',TO_DATE('1-01-1935','DD-MM-YYYY'),null,null,null,null,null,null);
+INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (1,'Hugo','McDuc','CC','1234',TO_DATE('1-01-1970','DD-MM-YYYY'),null,null,null,null,null,null);
+INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (2,'Paco','McDuc','CC','1235',TO_DATE('1-01-1970','DD-MM-YYYY'),null,null,null,null,null,null);
+INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (3,'Luis','McDuc','CC','1245',TO_DATE('1-01-1970','DD-MM-YYYY'),null,null,null,null,null,null);
+INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (4,'Donald','McDuc','CC','1356',TO_DATE('1-01-1940','DD-MM-YYYY'),null,null,null,null,null,null);
+INSERT INTO cliente (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (5,'Rich','McDuc','CC','2367',TO_DATE('1-01-1935','DD-MM-YYYY'),null,null,null,null,null,null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (6, 'Teresa', 'Mendoza', 'CC', '6356230', to_date('6/7/1978','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (7, 'Susan', 'Hill', 'CC', '4611834', to_date('27/4/1993','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (8, 'Louise', 'Duncan', 'CC', '6109763', to_date('6/9/1959','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (9, 'Sean', 'Robertson', 'CC', '4044628', to_date('30/6/1962','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (10, 'Kimberly', 'Chapman', 'CC', '6003882', to_date('27/3/1968','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (11, 'Terry', 'Vasquez', 'CC', '5001822', to_date('18/1/1963','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (12, 'Ralph', 'Hamilton', 'CC', '4326575', to_date('9/5/1962','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (13, 'Lori', 'Mccoy', 'CC', '6014377', to_date('4/1/1959','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (14, 'Sean', 'Gray', 'CC', '8655408', to_date('7/12/1991','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (15, 'Irene', 'Black', 'CC', '7886391', to_date('17/4/1952','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (16, 'Christopher', 'Garrett', 'CC', '4109170', to_date('16/7/1989','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (17, 'Tammy', 'Andrews', 'CC', '2194563', to_date('27/8/1974','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (18, 'Patrick', 'Jordan', 'CC', '7904558', to_date('17/10/1964','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (19, 'Norma', 'Elliott', 'CC', '6813633', to_date('10/3/1957','DD/MM/YYYY'), null, null, null, null, null, null);
+INSERT INTO CLIENTE (cliente_id, nombres, apellidos, tipo_documento, numero_documento, fecha_nacimiento, direccion, ciudad_residencia, telefono_fijo, telefono_celular, fax, email) VALUES (20, 'Anthony', 'James', 'CC', '3035257', to_date('17/8/1982','DD/MM/YYYY'), null, null, null, null, null, null);
+
 
 Prompt ******  Insert table hotel ....
 INSERT INTO hotel (hotel_id, nombre, categoria, ciudad_id, website, telefono)
@@ -268,16 +279,311 @@ INSERT INTO reserva(
 VALUES (3,1,3, 'T','T',TO_DATE('08-01-2015','DD-MM-YYYY'),TO_DATE('15-01-2015','DD-MM-YYYY'),
 1,TO_DATE('30-12-2014','DD-MM-YYYY'),1);
 
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (4,1,3, 'T','T',TO_DATE('15-02-2015','DD-MM-YYYY'),TO_DATE('20-02-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (5,1,3, 'T','T',TO_DATE('1-03-2015','DD-MM-YYYY'),TO_DATE('8-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (6,1,3, 'T','T',TO_DATE('1-03-2015','DD-MM-YYYY'),TO_DATE('8-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (7,1,5, 'T','T',TO_DATE('1-03-2015','DD-MM-YYYY'),TO_DATE('8-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (8,1,5, 'T','T',TO_DATE('1-03-2015','DD-MM-YYYY'),TO_DATE('15-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (9,1,3, 'T','T',TO_DATE('3-03-2015','DD-MM-YYYY'),TO_DATE('12-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (10,1,5, 'T','T',TO_DATE('3-03-2015','DD-MM-YYYY'),TO_DATE('16-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (11,1,5, 'T','T',TO_DATE('21-03-2015','DD-MM-YYYY'),TO_DATE('31-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (12,1,5, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (13,1,4, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (14,1,4, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (15,1,4, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (16,1,4, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (17,1,2, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (18,1,2, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (19,1,2, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (20,1,4, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (21,1,4, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (22,1,6, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
+INSERT INTO reserva(
+    reserva_id,        
+    ciudad_origen,     
+    ciudad_destino,    
+    reserva_hotel,     
+    reserva_vuelo,     
+    fecha_salida,      
+    fecha_regreso,     
+    cantidad_personas, 
+    fecha_creacion,    
+    usuario_id
+  )
+VALUES (23,1,9, 'T','T',TO_DATE('23-03-2015','DD-MM-YYYY'),TO_DATE('30-03-2015','DD-MM-YYYY'),
+1,TO_DATE('2-1-2015','DD-MM-YYYY'),1);
 
 INSERT INTO  cliente_reserva (cliente_id, reserva_id, pasajero_principal) 
 	VALUES (1,1,'T');
-
 INSERT INTO  cliente_reserva (cliente_id, reserva_id, pasajero_principal) 
 	VALUES (2,2,'T');
-
 INSERT INTO  cliente_reserva (cliente_id, reserva_id, pasajero_principal) 
 	VALUES (3,3,'T');
-
+INSERT INTO  cliente_reserva (cliente_id, reserva_id, pasajero_principal) 
+	VALUES (4,4,'T');
+INSERT INTO  cliente_reserva (cliente_id, reserva_id, pasajero_principal) 
+	VALUES (5,5,'T');
+INSERT INTO  cliente_reserva (cliente_id, reserva_id, pasajero_principal) 
+	VALUES (6,6,'T');	
 
 INSERT INTO reserva_hotel(
 	reserva_hotel_id,     
@@ -304,6 +610,27 @@ VALUES (
 	,TO_DATE('01/01/2015', 'DD/MM/YYYY')
 	,TO_DATE('31/12/2014', 'DD/MM/YYYY')
 	,'ADS123'
-);	
+);
+
+INSERT INTO reserva_vuelo
+	(reserva_vuelo_id
+	, reserva_id
+	,vuelo_id
+	,clase
+	,estado
+	,limite_pago
+	,valor
+	,realizado
+	,confirmacion_reserva)
+VALUES (
+	1
+	,1
+	,5
+	,'tur'
+	,'CON'
+	,TO_DATE('1/1/2015','DD/MM/YYYY')
+	,'48000000'
+	,TO_DATE('31/12/2014','DD/MM/YYYY')
+	,'HKJ898');
 
 commit;
